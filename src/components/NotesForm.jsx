@@ -3,7 +3,7 @@ import { useNotes } from '../context/NotesContext'
 import { authContext } from '../context/AuthContext'
 import { useSideNav } from '../context/SideNavContext'
 import { IoClose } from 'react-icons/io5'
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward } from 'react-icons/io'
 
 export const NotesForm = () => {
 	const [notesName, setNotesName] = useState('')
@@ -21,7 +21,12 @@ export const NotesForm = () => {
 	const { sideNav, handleSideNav } = useSideNav()
 	return (
 		<>
-			<div className='absolute top-1/2 left-20 z-20 text-gray-500 cursor-pointer' onClick={handleSideNav}><IoIosArrowForward size={30} /></div>
+			<div
+				className='absolute top-1/2 left-20 z-20 text-gray-500 hover:text-gray-300 cursor-pointer'
+				onClick={handleSideNav}
+			>
+				<IoIosArrowForward size={30} />
+			</div>
 
 			<div
 				className={`fixed md:relative min-h-screen w-full md:w-64 z-20 ${
