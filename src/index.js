@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App.js'
@@ -11,21 +11,14 @@ import { SideNavContextProvider } from './context/SideNavContext.jsx'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<React.StrictMode>
-	
-	<BrowserRouter>
-		<AuthContextProvider>
-			<NotesContextProvider>
-				<SideNavContextProvider>
-				<div className='flex h-screen flex-col md:flex-row md:overflow-hidden'>
-						<div className='bg-[#121212]'>{<NotesForm/>}</div>
-						<div className='flex-grow p-6 md:overflow-y-auto md:p-12 bg-[#121212]'>
-						<App/>
-						</div>
-					</div>
+		<BrowserRouter>
+			<AuthContextProvider>
+				<NotesContextProvider>
+					<SideNavContextProvider>
+						<App />
 					</SideNavContextProvider>
-			</NotesContextProvider>
-		</AuthContextProvider>
-	</BrowserRouter>
+				</NotesContextProvider>
+			</AuthContextProvider>
+		</BrowserRouter>
 	</React.StrictMode>
-
 )

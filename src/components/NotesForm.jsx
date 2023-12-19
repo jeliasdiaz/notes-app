@@ -20,7 +20,7 @@ export const NotesForm = () => {
 
 	const { sideNav, handleSideNav } = useSideNav()
 	return (
-		<>
+		<div>
 			<div
 				className='absolute top-1/2 left-20 z-20 text-gray-500 hover:text-gray-300 cursor-pointer'
 				onClick={handleSideNav}
@@ -31,7 +31,7 @@ export const NotesForm = () => {
 			<div
 				className={`fixed md:relative min-h-screen w-full md:w-64 z-20 ${
 					sideNav ? 'slide-right' : 'slide-left'
-				}  ${user.email ? '' : 'hidden'}`}
+				} `}
 			>
 				<form
 					onSubmit={handleSubmit}
@@ -65,9 +65,9 @@ export const NotesForm = () => {
 					<br />
 					<button
 						disabled={adding}
-						className='text-white p-2 rounded-md bg-[#3F3250] mt-2 w-full'
+						className='text-white p-2 rounded-md bg-[#3F3250] mt-2 w-full hover:bg-[#3b2b52]'
 					>
-						{adding ? 'Adding' : 'Save'}
+						{adding ? 'Saving' : 'Save'}
 					</button>
 				</form>
 
@@ -85,6 +85,6 @@ export const NotesForm = () => {
 					</button>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }

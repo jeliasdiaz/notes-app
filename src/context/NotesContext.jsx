@@ -19,7 +19,7 @@ export const NotesContextProvider = ({ children }) => {
 		const { data } = await client
 			.from('notes')
 			.select()
-			.eq('user_id', user.data.user.id) // if the id of the current user is equal to the column of the table return it
+			.eq('user_id', user.data.user?.id) // if the id of the current user is equal to the column of the table return it
 		setNotes(data)
 		setloadingNotes(false)
 	}
