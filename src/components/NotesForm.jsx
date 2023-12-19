@@ -22,7 +22,7 @@ export const NotesForm = () => {
 	return (
 		<div>
 			<div
-				className='absolute top-1/2 left-20 z-20 text-gray-500 hover:text-gray-300 cursor-pointer'
+				className='absolute top-1/2 left-20 z-20 text-gray-500 hover:text-gray-300 cursor-pointer hidden md:visible'
 				onClick={handleSideNav}
 			>
 				<IoIosArrowForward size={30} />

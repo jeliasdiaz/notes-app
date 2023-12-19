@@ -5,7 +5,6 @@ import App from './App.js'
 import { BrowserRouter } from 'react-router-dom'
 import { AuthContextProvider } from './context/AuthContext.jsx'
 import { NotesContextProvider } from './context/NotesContext.jsx'
-import { NotesForm } from './components/NotesForm.jsx'
 import { SideNavContextProvider } from './context/SideNavContext.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
